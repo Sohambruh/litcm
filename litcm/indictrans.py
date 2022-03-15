@@ -32,7 +32,7 @@ class RomanConvertor():
         root = tree.keys()[0]
         try:
             subset = tree[root][x[int(root)]]
-        except KeyError, e:
+        except KeyError as e:
             best_val = str(tree[root])
             res = re.findall(r":\s(u'.*?')", best_val)
             res_tpl = Counter(res).most_common(1)
@@ -61,15 +61,15 @@ class RomanConvertor():
             data_point.extend([p1, p2, p3, self.input_[i]])
             try:
                 data_point.append(self.input_[i+1])
-            except IndexError, e:
+            except IndexError as e:
                 data_point.append("_")
             try:
                 data_point.append(self.input_[i+2])
-            except IndexError, e:
+            except IndexError as e:
                 data_point.append("_")
             try:
                 data_point.append(self.input_[i+3])
-            except IndexError, e:
+            except IndexError as e:
                 data_point.append("_")
             self.find(data_point, self.tree_)
             p1, p2, p3 = p2, p3, self.input_[i]
