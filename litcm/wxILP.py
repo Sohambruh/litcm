@@ -6,7 +6,7 @@ and vice-versa."""
 
 import re
 import sys
-
+unichr=chr
 __version__    = "1.0.0"
 __license__    = "MIT"
 __author__     = "Irshad Ahmad"
